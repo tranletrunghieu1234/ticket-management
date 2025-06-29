@@ -41,9 +41,9 @@ const LayoutWrapper = () => {
 		navigate('tickets');
 	}
 	return (
-		<div className="bg-[#F1F5F9] h-screen w-screen">
+		<div className="bg-[#F1F5F9] h-screen w-full">
 			<div className='flex w-full h-full'>
-				<header className="h-full bg-white flex items-start px-4 header-information w-[280px] border-r-[1px] border-gray-200 pt-4 flex-col gap-4">
+				<header className="h-full bg-white flex items-start px-4 header-information w-[18%] min-w-[280px] border-r-[1px] border-gray-200 pt-4 flex-col gap-4">
 					<img src='/images/task-management-tips.webp' className='rounded-[20px] h-[70px] w-full object-contain' />
 					<Menu
 						onClick={() => {
@@ -56,7 +56,7 @@ const LayoutWrapper = () => {
 						items={items}
 					/>
 				</header>
-				<div className='flex flex-col w-full h-full'>
+				<div className='flex flex-col w-[82%] h-full'>
 					<header className="min-h-[60px] bg-white flex items-center justify-between px-4 header-information w-full border-b-[1px] border-gray-200">
 						<p className='text-gray-500 text-xl cursor-pointer px-10' onClick={backToHome}>
 							Ticket Managements

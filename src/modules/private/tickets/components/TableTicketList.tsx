@@ -9,6 +9,7 @@ const TableTicketList = (props: IDataTable) => {
 	scroll={{ y: 200 }}
 	loading={props?.isLoading}
 	size="small"
+	className="w-full"
 	/>
 }
 export default TableTicketList;
