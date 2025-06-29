@@ -1,0 +1,88 @@
+.floating-label-input-wrapper {
+  min-height: 60px;
+  position: relative;
+
+  &:has(.ant-input-suffix) {
+    .ant-input {
+      border: unset !important;
+    }
+  }
+  
+  .ant-input-suffix {
+    color: #858585 !important;
+    user-select: none !important;
+    font-family: "Inter" !important;
+    padding-right: 14px !important;
+  }
+  
+  .ant-input-affix-wrapper {
+    min-height: 60px;
+    padding: unset !important;
+    border-radius: 10px !important;
+    border: 1px solid #c5c5c5 !important;
+
+    &.ant-input-status-error {
+      border-color: #ff4d4f !important;
+    }
+    
+    .ant-input {
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      padding-top: 1.25rem;
+      padding-bottom: 0.25rem;
+    }
+  }
+  
+  .ant-input {
+    /* Assuming these are your custom typography classes */
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    
+    min-height: 60px;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    padding-top: 1.25rem;
+    padding-bottom: 0.25rem;
+    border-radius: 10px !important;
+    border: 1px solid #212121 !important;
+
+    &::placeholder {
+      opacity: 0; /* Hide the visual placeholder but keep it for :placeholder-shown state */
+      transition: opacity 0.2s ease;
+    }
+  }
+  
+  .ant-input-outlined:focus,
+  .ant-input-outlined:focus-within {
+    box-shadow: none !important;
+  }
+  
+  /* Laptop breakpoint media query */
+  @media (min-width: 1024px) {
+    min-height: 60px;
+    
+    .ant-input-affix-wrapper {
+      min-height: 60px;
+      
+      .ant-input {
+        padding-top: 30px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 0.625rem;
+      }
+    }
+    
+    .ant-input {
+      /* PC body text styles */
+      font-size: 1rem;
+      line-height: 1.5rem;
+      
+      min-height: 60px;
+      padding-top: 30px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 0.625rem;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.custom-black-line-medium-pc-button {
+  .ant-btn-default {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border-color: #212121;
+    /* Base styles */
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+
+    /* Assuming these are your custom typography classes */
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+    /* Hover state */
+    &:hover {
+      color: white;
+    }
+
+    /* Laptop breakpoint (typically 1024px) */
+    @media (min-width: 1024px) {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+
+      /* PC body text styles */
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
+    background-color: #212121;
+    color: white !important;
+    border-color: transparent !important;
+  }
+}
