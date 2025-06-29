@@ -3,6 +3,7 @@ import type { IDataTable } from "../../../../shared/utils/interface.util";
 
 const TableTicketList = (props: IDataTable) => {
 	return <Table 
+	rowKey="id"
 	dataSource={props?.dataSource}
 	columns={props?.column} 
 	scroll={{ y: 200 }}

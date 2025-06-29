@@ -61,9 +61,6 @@ const TicketList = () => {
       title: 'Task Name',
       dataIndex: 'description',
       key: 'description',
-      filterSearch: true,
-      onFilter: (value, record) =>
-        record.description?.toLowerCase().includes(value.toString().toLowerCase()),
     },
     {
       title: 'Assignee Name',
@@ -202,7 +199,6 @@ const TicketList = () => {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           tap((resUser: any) => {
             if (!isNullOrEmpty(resUser)) {
-              console.log(resUser)
               setUserList(resUser)
             }
           }),

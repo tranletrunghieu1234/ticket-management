@@ -1,4 +1,5 @@
-import { defineConfig } from 'vite'
+// import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'      // ← here!
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import path from 'path';
@@ -14,5 +15,9 @@ export default defineConfig({
       { find: '@', replacement: path.resolve(__dirname, 'src') },
       { find: '@shared', replacement: path.resolve(__dirname, 'src/shared') }
     ],
+  },
+  test: {
+    environment: "jsdom",
   }
+
 })
